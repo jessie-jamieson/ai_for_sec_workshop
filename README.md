@@ -25,3 +25,5 @@ export UV_PYTHON_PREFERENCE="only-managed"
 - Select your environment for the notebook (This should be the `.venv` folder that is created in repository directory). Refer to your IDE docs/favorite AI assistant to understand how to provide an existing environment for jupyter notebooks. 
 - VS Code Example: VS Code will prompt you to select a kernel and provide choices. By default, it should look in the current directory and present .venv as an option
 - Execute the first cell to test the environment for notebook execution. The output is self-explanatory
+
+5. Download datasets from the provided Google Drive. Add all the datasets to the data folder
