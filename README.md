@@ -4,8 +4,7 @@ This repository consists of collection of Jupyter notebooks and Python files tha
 The authors have tested this in the following environments
 - VS Code 1.98.2 on a MacOS 15.3.2
 
-
-### Instructions
+### MAC Instructions
 1. Install uv (uv manages python versions, packages and dependencies)
 a. Follow your preferred method of installation [here](https://docs.astral.sh/uv/getting-started/installation/). We recommend Homebrew installs on Mac
 b. Run `uv python list` and note this output. This will be used later. 
@@ -15,7 +14,21 @@ eval "$(uv generate-shell-completion bash)"
 export PATH="$PATH:<your output from step 1b>" (It should look something like: export PATH="$PATH:$HOME/path/to/uv/python/cpython-3.10.16-macos-aarch64-none/bin/")
 export UV_PYTHON_PREFERENCE="only-managed"
 ```
+### Windows Instructions
+1. Install uv (uv manages python versions, packages and dependencies)
+a. Follow your preferred method of installation [here](https://docs.astral.sh/uv/getting-started/installation/). 
+b. Run `uv python list` and note this output. This will be used later. 
+```
+winget install --id=astral-sh.uv  -e
+\\Setup for autocompletion of uv commands
+if (!(Test-Path -Path $PROFILE)) {New-Item -ItemType File -Path $PROFILE -Force} 
+Add-Content -Path $PROFILE -Value '(& uv generate-shell-completion powershell) | Out-String | Invoke-Expression'
+eval "$(uv generate-shell-completion bash)"
+export PATH="$PATH:<your output from step 1b>" 
+\\Example: export PATH="$PATH:cpython-3.14.0a6-windows-x86_64-none"
+export UV_PYTHON_PREFERENCE="only-managed"
 
+```
 2. Git clone this repository by running:  `git clone git@github.com:AI-and-Security/ai_for_sec_workshop.git`
 
 3. Inside the repository, run the command to test your execution environment. The output is self-explanatory
