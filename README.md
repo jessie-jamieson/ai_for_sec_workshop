@@ -4,7 +4,6 @@ This repository consists of collection of Jupyter notebooks and Python files tha
 The authors have tested this in the following environments
 - VS Code 1.98.2 (IDE) on a MacOS 15.3.2 (Platform)
 
-
 ### Instructions
 #### MacOS
 1. Install uv (uv manages python versions, packages and dependencies)
@@ -20,7 +19,6 @@ export UV_PYTHON_PREFERENCE="only-managed"
 2. Git clone this repository by running:  `git clone git@github.com:AI-and-Security/ai_for_sec_workshop.git` or `git clone https://github.com/AI-and-Security/ai_for_sec_workshop.git`
 
 3. Inside the repository, execute this command `uv run test.py` to test your execution environment. The output is self-explanatory
-
  
 4. In your favorite IDE, navigate to repository/notebooks and click on test.ipynb
 - Select your environment for the notebook (This should be the `.venv` folder that is created in repository directory). Refer to your IDE docs/favorite AI assistant to understand how to provide an existing environment for jupyter notebooks. 
@@ -41,5 +39,17 @@ export UV_PYTHON_PREFERENCE="only-managed"
 - Rename `.env.example` to `.env`
 - Replace "Topic/Your Name" with a something of your choice that is non-adversarial in `ti/src/ti/main.py`
 
+### Windows Instructions
+1. Install uv (uv manages python versions, packages and dependencies)
+a. Follow your preferred method of installation [here](https://docs.astral.sh/uv/getting-started/installation/). 
+b. Run `uv python list` and note this output. This will be used later. 
 
-#### Windows
+```
+winget install --id=astral-sh.uv  -e
+\\Setup for autocompletion of uv commands
+if (!(Test-Path -Path $PROFILE)) {New-Item -ItemType File -Path $PROFILE -Force} 
+Add-Content -Path $PROFILE -Value '(& uv generate-shell-completion powershell) | Out-String | Invoke-Expression'
+eval "$(uv generate-shell-completion bash)"
+export PATH="$PATH:<your output from step 1b>" 
+\\Example: export PATH="$PATH:cpython-3.14.0a6-windows-x86_64-none"
+export UV_PYTHON_PREFERENCE="only-managed"
