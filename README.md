@@ -3,6 +3,7 @@ This repository consists of collection of Jupyter notebooks and Python files tha
 
 The authors have tested this in the following environments
 - VS Code 1.98.2 (IDE) on a MacOS 15.3.2 (Platform)
+- VS Code 1.98.2 (IDE) on Windows 11 (Platform)
 
 ### Instructions
 #### MacOS
@@ -53,3 +54,4 @@ eval "$(uv generate-shell-completion bash)"
 export PATH="$PATH:<your output from step 1b>" 
 \\Example: export PATH="$PATH:cpython-3.14.0a6-windows-x86_64-none"
 export UV_PYTHON_PREFERENCE="only-managed"
+
