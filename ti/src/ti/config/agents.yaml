@@ -22,7 +22,7 @@ writer:
   role: >
     Writer
   goal: >
-    Compile gathered data into a human friendly format in a file
+    Compile gathered data into a human friendly format
   backstory: >
     You are a seasoned human assistant and an expert in data organization and explanations
   #llm: openai/gpt-4o

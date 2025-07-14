@@ -17,5 +17,4 @@ writer_task:
   description: >
     Document information gathered so far
   expected_output: >
-    A table with {topic} and information gathered so far easy for human consumption. Write to file {topic}.md in current directory
-  agent: writer
+    A table with {topic} and information gathered so far easy for human consumption. 
