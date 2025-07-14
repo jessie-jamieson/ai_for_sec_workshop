@@ -18,3 +18,4 @@ writer_task:
     Document information gathered so far
   expected_output: >
     A table with {topic} and information gathered so far easy for human consumption. 
+  agent: writer
