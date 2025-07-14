@@ -41,17 +41,4 @@ export UV_PYTHON_PREFERENCE="only-managed"
 - Replace "Topic/Your Name" with a something of your choice that is non-adversarial in `ti/src/ti/main.py`
 
 ### Windows Instructions
-1. Install uv (uv manages python versions, packages and dependencies)
-a. Follow your preferred method of installation [here](https://docs.astral.sh/uv/getting-started/installation/). 
-b. Run `uv python list` and note this output. This will be used later. 
-
-```
-winget install --id=astral-sh.uv  -e
-\\Setup for autocompletion of uv commands
-if (!(Test-Path -Path $PROFILE)) {New-Item -ItemType File -Path $PROFILE -Force} 
-Add-Content -Path $PROFILE -Value '(& uv generate-shell-completion powershell) | Out-String | Invoke-Expression'
-eval "$(uv generate-shell-completion bash)"
-export PATH="$PATH:<your output from step 1b>" 
-\\Example: export PATH="$PATH:cpython-3.14.0a6-windows-x86_64-none"
-export UV_PYTHON_PREFERENCE="only-managed"
-
+Coming Soon! 
